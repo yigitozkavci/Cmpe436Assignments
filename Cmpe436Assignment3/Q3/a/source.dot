@@ -1,0 +1,53 @@
+digraph G {
+  // S0
+  s0_0[ label = "s0 (r)" ]
+  s0_1[ label = "s0 (r)" ]
+  s0_2[ label = "s0 (r)" ]
+  s0_3[ label = "s0 (r)" ]
+  s0_4[ label = "s0 (r)" ]
+
+  s1_1[ label = "s1 (p, t, r)" ]
+  s1_2[ label = "s1 (p, t, r)" ]
+  s1_3[ label = "s1 (p, t, r)" ]
+  s1_4[ label = "s1 (p, t, r)" ]
+
+  s2_1[ label = "s2 (q, r)" ]
+  s2_2[ label = "s2 (q, r)" ]
+  s2_3[ label = "s2 (q, r)" ]
+  s2_4[ label = "s2 (q, r)" ]
+
+  s3_1[ label = "s3 (p, q)" ]
+  s3_2[ label = "s3 (p, q)" ]
+  s3_3[ label = "s3 (p, q)" ]
+  s3_4[ label = "s3 (p, q)" ]
+
+  s0_0 -> s0_1;
+  s0_0 -> s1_1;
+  s0_0 -> s3_1;
+
+  s0_1->s0_2;
+  s0_1->s1_2;
+  s0_1->s3_2;
+
+  s0_2->s0_3;
+  s0_2->s1_3;
+  s0_2->s3_3;
+
+  s0_3->s0_4;
+  s0_3->s1_4;
+  s0_3->s3_4;
+
+  // S1
+  s1_1->s2_2;
+  s1_2->s2_3;
+  s1_3->s2_4;
+
+  // S2
+  s2_2->s1_3;
+  s2_3->s1_4;
+
+  // S3
+  s3_1->s2_2;
+  s3_2->s2_3;
+  s3_3->s2_4;
+}

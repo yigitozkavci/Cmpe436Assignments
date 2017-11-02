@@ -11,7 +11,6 @@ digraph G {
   s1_3[ label = "s1 (p, t, r)" ]
   s1_4[ label = "s1 (p, t, r)" ]
 
-  s2_1[ label = "s2 (q, r)" ]
   s2_2[ label = "s2 (q, r)" ]
   s2_3[ label = "s2 (q, r)" ]
   s2_4[ label = "s2 (q, r)" ]

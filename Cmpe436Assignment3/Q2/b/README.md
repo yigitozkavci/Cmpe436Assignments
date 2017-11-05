@@ -1,5 +1,5 @@
-# Starvation
-Starvation of a process is possible in this promela model, because a process can repeatedly enter its critical section without allowing others.
+# Starvation-Free
+Starvation of a process is not possible in this promela model, because a process can eventually enter its critical section.
 
 State will be represented with the tuple (y0, y1, s) in each notable point.
 
@@ -21,4 +21,6 @@ Process 1 completes atomic transaction at line 14, then we have the state (0, 1,
 
 Process 1 sees the block at line 9, but it is executed immediately since (y[1-1] == 0) holds.
 
-Since we have the same state, theoretically process 1 can enter its critical section without ever allowing process 0.
+Since we have the same state, theoretically process 1 can enter its critical section again.
+
+This behavior is causing nondeterminism on the order of entering critical sections for processes. But this property doesn't cause starvation.

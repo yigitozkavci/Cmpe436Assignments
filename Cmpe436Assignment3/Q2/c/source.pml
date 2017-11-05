@@ -28,5 +28,4 @@ init {
   run A(1);
 }
 
-ltl first_not_starve { <> critical[0] }
-ltl second_not_starve { <> critical[1] }
+ltl infinitely_often { ([] (<> critical[0])) && ([] (<> critical[1])) }

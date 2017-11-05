@@ -28,4 +28,4 @@ init {
   run A(1);
 }
 
-ltl mutex { [] (!critical[0] || !critical[1]) }
+ltl unbounded_overtaking { (<> critical[0]) && (<> critical[1]) }
